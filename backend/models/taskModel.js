@@ -13,7 +13,13 @@ const taskSchema = mongoose.Schema (
         completed:{
             type: Boolean,
             required: true
-        }
+        },
+        user: [
+            {
+            type: mongoose.Types.ObjectId,
+            ref: "User",
+            },
+        ],
     },
     {
         timestamps: true

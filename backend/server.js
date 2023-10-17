@@ -6,6 +6,7 @@ const express = require('express')
 const mongoose = require('mongoose');
 // moved routes into their own folders for mvc architecture 
 const taskRoute = require('./routes/taskRoute');
+const userRoute = require('./routes/userRoute')
 // middleware is good for hiding errors and locations (to make more secure)
 const errorMiddleware = require('./middleware/errorMiddleware')
 const cors = require('cors')
@@ -32,12 +33,9 @@ app.get('/',(req, res) =>{
 })
 
 app.use('/api/tasks', taskRoute)
-// app.use('/api/users', userRoute)
+app.use('/api/users', userRoute)
 
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
 
 //using middleware
 app.use(errorMiddleware);
