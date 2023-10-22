@@ -17,7 +17,7 @@ const EditTaskPage = () => {
     const getTask = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get(`http://localhost:3000/api/tasks/${id}`);
+            const response = await axios.get(`${VITE_BACKEND_URL}/api/tasks/${id}`);
             setTask({
                 name: response.data.name,
                 description: response.data.description,

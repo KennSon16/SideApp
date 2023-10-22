@@ -13,7 +13,7 @@ const App = () => {
         <div>
             <nav className="bg-gray-800">
                 <div className="container mx-auto p-6">
-                    <Link to="/"><h1 className="text-white text-3xl font-bold">SideApp v1</h1></Link>
+                    <Link to="/"><h1 className="text-white text-3xl font-bold">SideApp v1 </h1></Link>
                 </div>
                 
             </nav>

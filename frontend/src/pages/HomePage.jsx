@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Task from "../components/Task";
-import {VITE_BACKEND_URL} from "../App"
+import {VITE_BACKEND_URL} from "../App";
 
 const HomePage = () => {
 
@@ -11,7 +11,7 @@ const HomePage = () => {
 
     const getTasks = async () => {
         try{
-
+            console.log(VITE_BACKEND_URL);
             setIsLoading(true);
             const response = await axios.get(`${VITE_BACKEND_URL}/api/tasks/`);
             console.log(response.data);
