@@ -39,7 +39,7 @@ const loginUser = asyncHandler(async(req,res) => {
 
 //get user
 const getUsers = asyncHandler(async(req,res) => {
-    if (process.env.NODE_ENV === "development"){
+    if (process.env.NODE_ENV === "developement"){
         try {
             const user = await User.find({});
             res.status(200).json(user)
@@ -53,7 +53,7 @@ const getUsers = asyncHandler(async(req,res) => {
 
 // get a user by id
 const getUser = asyncHandler(async(req,res) => {
-    if (process.env.NODE_ENV === "development"){
+    if (process.env.NODE_ENV === "developement"){
         try {
             const {id} = req.params;
             const user = await User.findById(id);
